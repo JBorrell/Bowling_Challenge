@@ -46,7 +46,7 @@ Usage
 =====
 Simply press BOWL to play! After 10 frames, feel free to enter your name to save your score & click 'New Game' to reset! Enjoy!
 
-![](images/Bowling.png)
+![](public/images/Bowling.png)
 
 
 Testing
