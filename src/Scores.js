@@ -4,5 +4,5 @@ function Scores(){
 
 Scores.prototype.save_score = function(name, score) {
   this.scores.push([name, score])
-  // this.scores.sort();
+  this.scores.sort();
 };
