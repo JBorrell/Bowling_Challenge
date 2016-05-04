@@ -5,11 +5,11 @@ function Game() {
   this.framePoints3 = 0
 }
 
-Game.prototype.play = function(frame) {
+Game.prototype.play = function(frame, x) {
   if (frame.frameScores.length >= 9){
-    this.play_finalFrame(frame)
+    this.play_finalFrame(frame, x)
   } else {
-  frame.bowl()}
+  frame.bowl(x)}
 };
 
 Game.prototype.get_score = function(frame) {
@@ -18,7 +18,7 @@ Game.prototype.get_score = function(frame) {
 };
 
 Game.prototype.play_finalFrame = function(frame, x) {
-  frame.lastFrame_bowl()
+  frame.lastFrame_bowl(x)
 };
 
 Game.prototype.newGame = function(frame) {

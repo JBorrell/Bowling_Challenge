@@ -9,8 +9,7 @@ function Frame() {
   this.points = 0
 }
 
-Frame.prototype.bowl = function() {
-  var x = (Math.round(Math.random() * this.pins ))
+Frame.prototype.bowl = function(x) {
   this.points = x
   this.pins -= x
   this.turnCount += 1
@@ -47,9 +46,8 @@ Frame.prototype._isStrikeorSpare = function() {
   } else {this.spare = true}
 }
 
-Frame.prototype.lastFrame_bowl = function() {
+Frame.prototype.lastFrame_bowl = function(y) {
   if(this.game_over === false){
-  var y = (Math.round(Math.random() * this.pins ))
   this.points = y
   if (this.strike && this.currentFrame.length === 0)
   {this.frameScores.slice(-2)[0].push(y)}

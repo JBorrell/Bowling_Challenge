@@ -23,7 +23,7 @@ $( document ).ready(function(){
   })
 
   $('#bowl').click(function(){
-    game.play(frame)
+    game.play(frame, (Math.round(Math.random() * frame.pins )))
     $('#right').show();
     $('#right').text("You scored: " + frame.points)
     if (frame.frameScores.length <= 1 && frame.currentFrame.length === 0){

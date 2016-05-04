@@ -35,15 +35,13 @@ describe("Game", function() {
 
   it("Should be able to show points of first bowl of frame", function(){
     game.play(frame, 4)
-    game.bowl1_score(frame);
-    expect(game.framePoints1).toEqual(4)
+    expect(frame.points).toEqual(4)
   })
 
   it("Should be able to show points of second bowl of frame", function(){
     game.play(frame, 2)
     game.play(frame, 5)
-    game.bowl2_score(frame);
-    expect(game.framePoints2).toEqual(5)
+    expect(frame.frameScores[0][1]).toEqual(5)
   })
 
   it("Spare should add first bowl in final frame to frame before", function(){
@@ -78,8 +76,8 @@ describe("Game", function() {
     for(var x = 0; x < 11; x++) {
     game.play(frame, 10)}
     game.play(frame, 7)
-    game.bowl3_score(frame)
-    expect(game.framePoints3).toEqual(7)
+    // game.bowl3_score(frame)
+    expect(frame.frameScores[9][2]).toEqual(7)
   })
 
   it("Should be able to start a new game", function(){
